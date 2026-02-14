@@ -117,6 +117,10 @@ def blog_post(slug):
 def about():
     return render_template("about.html")
 
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
+
 @app.route("/products")
 def products():
     return render_template("products.html")

@@ -20,68 +20,70 @@
         </div>
     </div>
 
-    <!-- Details Grid -->
-    <div class="grid md:grid-cols-2 gap-12 mb-20">
-        <!-- Professional Bio -->
-        <div>
-            <h2 class="text-2xl font-bold text-[#0B1F3B] mb-6 border-b border-slate-200 pb-2">About Me</h2>
-            <div class="prose prose-slate text-slate-600">
-                <p>
-                    With over 5 years of experience in the tech industry, I have worked on projects ranging from
-                    threat intelligence dashboards to zero-trust network architectures.
-                </p>
-                <p>
-                    I am passionate about open-source software and believe in the power of community-driven development.
-                    When I'm not coding, you can find me analyzing malware samples or experimenting with new LLMs.
-                </p>
-            </div>
-        </div>
+    <!-- Expanded Professional Bio -->
+    <div class="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-slate-100">
+        <h2 class="text-3xl font-bold text-[#0B1F3B] mb-8 border-b border-slate-200 pb-4">Professional Journey</h2>
 
-        <!-- Contact & Socials -->
-        <div>
-            <h2 class="text-2xl font-bold text-[#0B1F3B] mb-6 border-b border-slate-200 pb-2">Connect</h2>
-            <div class="space-y-6">
-                <!-- Location -->
-                <div class="flex items-center gap-4 text-slate-600">
-                    <span class="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center text-xl">📍</span>
-                    <span>San Francisco, CA (Remote)</span>
+        <div class="prose prose-lg prose-slate max-w-none text-slate-600">
+            <p>
+                With over 5 years of hands-on experience in the technology sector, I have dedicated my career to
+                unravelling
+                the complexities of digital security and artificial intelligence. Currently based in <strong>Telangana,
+                    India</strong>,
+                I assist organizations globally in fortifying their digital infrastructure while leveraging the power of
+                data.
+            </p>
+
+            <h3 class="text-[#0B1F3B] mt-8 mb-4">Technical Philosophy</h3>
+            <p>
+                I believe that security should not be an afterthought but a fundamental layer of any architectural
+                design.
+                Whether creating a simple automation script or a complex distributed system, I advocate for a "Secure by
+                Design"
+                methodology. My approach combines rigorous threat modeling with agile development practices to deliver
+                software that is both resilient and adaptable.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8 my-10 not-prose">
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-100">
+                    <h4 class="font-bold text-[#0B1F3B] mb-3 flex items-center gap-2">
+                        <span>🛡️</span> Security Focus
+                    </h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>• Penetration Testing & Vulnerability Assessment</li>
+                        <li>• Zero Trust Architecture Implementation</li>
+                        <li>• DevSecOps Pipeline Integration</li>
+                        <li>• Incident Response & Forensics</li>
+                    </ul>
                 </div>
-
-                <!-- Email -->
-                <div class="flex items-center gap-4 text-slate-600">
-                    <span class="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center text-xl">📧</span>
-                    <a href="mailto:hello@tanlabs.com" class="hover:text-[#43B0F1] transition">hello@tanlabs.com</a>
-                </div>
-
-                <!-- Social Links -->
-                <div class="flex gap-4 pt-4">
-                    <a href="#"
-                        class="w-12 h-12 bg-[#0B1F3B] text-white rounded-xl flex items-center justify-center hover:bg-[#43B0F1] transition shadow-lg">
-                        <!-- Github Icon -->
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                        </svg>
-                    </a>
-                    <a href="#"
-                        class="w-12 h-12 bg-[#0077B5] text-white rounded-xl flex items-center justify-center hover:bg-[#43B0F1] transition shadow-lg">
-                        <!-- Linkedin Icon -->
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                        </svg>
-                    </a>
-                    <a href="#"
-                        class="w-12 h-12 bg-[#1DA1F2] text-white rounded-xl flex items-center justify-center hover:bg-[#43B0F1] transition shadow-lg">
-                        <!-- Twitter Icon -->
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
-                        </svg>
-                    </a>
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-100">
+                    <h4 class="font-bold text-[#0B1F3B] mb-3 flex items-center gap-2">
+                        <span>🤖</span> AI & Automation
+                    </h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>• Large Language Model (LLM) Fine-tuning</li>
+                        <li>• Natural Language Processing (NLP)</li>
+                        <li>• Intelligent Process Automation</li>
+                        <li>• Predictive Analytics & Visualization</li>
+                    </ul>
                 </div>
             </div>
+
+            <h3 class="text-[#0B1F3B] mt-8 mb-4">Community & Open Source</h3>
+            <p>
+                Beyond client work, I am deeply committed to the open-source community. I actively contribute to
+                projects
+                focused on privacy-preserving machine learning and automated threat intelligence.
+                You can often find me analyzing the latest malware samples or writing tutorials to help the next
+                generation of
+                engineers navigate the ever-evolving tech landscape.
+            </p>
+
+            <p class="font-medium text-[#0B1F3B] mt-8">
+                Driving innovation through security, one line of code at a time.
+            </p>
         </div>
     </div>
+
 </section>
 {% endblock %}

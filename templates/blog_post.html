@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="py-20 max-w-3xl mx-auto px-6">
+    <div class="mb-10 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-[#0B1F3B] mb-4 leading-tight">{{ post.title }}</h1>
+        <div
+            class="flex items-center justify-center gap-4 text-slate-500 font-medium text-sm mb-8 uppercase tracking-wider">
+            <span>{{ post.date }}</span>
+            <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
+            <span>Est. 5 min read</span>
+        </div>
+        <p class="text-xl text-slate-600 leading-relaxed italic">
+            {{ post.description }}
+        </p>
+    </div>
+
+    <div class="prose prose-lg prose-slate max-w-none">
+        {{ post.content | safe }}
+    </div>
+
+    <div class="mt-16 pt-8 border-t border-slate-200">
+        <a href="/blog"
+            class="text-[#43B0F1] hover:text-[#0B1F3B] font-semibold transition-colors flex items-center gap-2">
+            &larr; Back to Blog
+        </a>
+    </div>
+</section>
+{% endblock %}

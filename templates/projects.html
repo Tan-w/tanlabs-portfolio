@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="py-20 max-w-7xl mx-auto px-6">
+  <div class="mb-12 text-center">
+    <h2 class="text-4xl font-bold text-[#0B1F3B] mb-4">Projects</h2>
+    <p class="text-slate-600 max-w-2xl mx-auto">
+      Here are some of the technical projects I've been working on, ranging from security tools to AI experiments.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+    {% for project in projects %}
+    <div
+      class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col h-full group">
+
+      <!-- Card Body -->
+      <div class="p-6 flex-grow flex flex-col">
+        <h3 class="text-xl font-bold text-[#0B1F3B] group-hover:text-[#43B0F1] transition-colors mb-2 line-clamp-1"
+          title="{{ project.title }}">
+          {{ project.title }}
+        </h3>
+
+        <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow line-clamp-3">
+          {{ project.description }}
+        </p>
+
+        <!-- Tech Stack -->
+        <div class="flex flex-wrap gap-2 mt-auto">
+          {% for tech in project.tech %}
+          <span class="bg-slate-50 text-slate-500 text-xs font-medium px-2.5 py-1 rounded-md border border-slate-200">
+            {{ tech }}
+          </span>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="px-6 pb-6 pt-0">
+        <a href="/project/{{ project.id }}"
+          class="text-sm font-semibold text-[#43B0F1] hover:text-[#0B1F3B] flex items-center gap-1 transition-colors">
+          View Details <span>&rarr;</span>
+        </a>
+      </div>
+
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

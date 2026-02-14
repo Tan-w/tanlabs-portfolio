@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="py-20 max-w-6xl mx-auto px-6">
+  <h2 class="text-3xl font-semibold text-[#0B1F3B] mb-10">Blog</h2>
+  <p class="text-slate-600 mb-12">Thoughts, tutorials, and insights on security, AI, and engineering.</p>
+
+  <div class="space-y-12">
+    {% for post in posts %}
+    <article class="border-b border-slate-200 pb-12 last:border-0">
+      <div class="text-sm text-slate-500 mb-2">{{ post.date }}</div>
+      <h3 class="text-2xl font-bold text-[#0B1F3B] mb-3">
+        <a href="/blog/{{ post.slug }}" class="hover:text-[#43B0F1] transition-colors">
+          {{ post.title }}
+        </a>
+      </h3>
+      <p class="text-slate-600 leading-relaxed mb-4">
+        {{ post.description }}
+      </p>
+      <a href="/blog/{{ post.slug }}"
+        class="text-[#43B0F1] font-semibold hover:text-[#0B1F3B] transition-colors inline-flex items-center gap-1">
+        Read Article <span>&rarr;</span>
+      </a>
+    </article>
+    {% else %}
+    <p class="text-slate-500 italic">No posts found yet. Check back soon!</p>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

@@ -3,9 +3,11 @@ import os
 import markdown
 import frontmatter
 from datetime import datetime
-from flask import Flask, render_template
+from flask import Flask, render_template, request, flash, redirect, url_for
 
 app = Flask(__name__)
+# SECURITY: Change this in production! Use an environment variable.
+app.secret_key = os.environ.get('SECRET_KEY', 'dev_key_DO_NOT_USE_IN_PRODUCTION')
 
 @app.route("/")
 def home():
@@ -117,13 +119,26 @@ def blog_post(slug):
 def about():
     return render_template("about.html")
 
-@app.route("/contact")
+@app.route("/contact", methods=["GET", "POST"])
 def contact():
+    if request.method == "POST":
+        name = request.form.get("name")
+        email = request.form.get("email")
+        message = request.form.get("message")
+        
+        # Here you would typically send an email
+        # For now, we'll just print to the console
+        print(f"New Message from {name} ({email}): {message}")
+        
+        flash("Thanks for reaching out! I'll get back to you soon.", "success")
+        return redirect(url_for("contact"))
+        
     return render_template("contact.html")
 
-@app.route("/products")
-def products():
-    return render_template("products.html")
+# @app.route("/products")
+# def products():
+#     return render_template("products.html")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    dev_mode = os.environ.get('FLASK_DEBUG', 'False').lower() == 'true'
+    app.run(debug=dev_mode)
